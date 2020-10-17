@@ -9,7 +9,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 
-engine = create_engine("postgresql://localhost:5432/canada_powerplant")
+engine = create_engine("postgres://zaduqyjf:EWKQdSG0Y6c1oin0T_bc6HaULsB8ODus@salt.db.elephantsql.com:5432/zaduqyjf")
 
 
 Base = automap_base()
@@ -51,7 +51,7 @@ def dates():
 
     session = Session(engine)
 
-    results = session.query(canada_date.Date, canada_date.Type, canada_date.VALUE).all()
+    results = session.query(canada_date.GEO, canada_date.Date, canada_date.Type, canada_date.VALUE).all()
 
     session.close()
 
