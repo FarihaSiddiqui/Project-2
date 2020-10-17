@@ -1,3 +1,7 @@
+function changeMapFunction(){
+
+}
+
 var myMap = L.map("map", {
     center: [56.13, -106.34],
     zoom: 4
@@ -11,4 +15,4 @@ var myMap = L.map("map", {
     id: "mapbox/streets-v11",
     accessToken: API_KEY
   }).addTo(myMap);
-  
+
