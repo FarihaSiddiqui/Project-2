@@ -303,7 +303,7 @@ var trace1 = {
   type: 'bar',
 }
 var trace2 = {
-  x: fossilFuelValue,
+  x: otherList,
   y: provinceList,
   name: 'Fossil Fuel',
   marker: {color: 'rgb(128, 0, 0)'},
@@ -338,12 +338,29 @@ var trace5 = {
   var data = [trace1, trace2, trace3, trace4, trace5];
 
   var layout = {barmode: 'stack',
-  yaxis: {
-    automargin: true
-  }
-  };
+  paper_bgcolor: "#ffffff00",
+    plot_bgcolor: "#ffffff00",
+    xaxis: {
+      tickfont : {
+        color : 'white'
+      }  },
+    yaxis: {
+    automargin: true,
+      tickfont : {
+        color : 'white'
+      }  },
+      legend: {
+        font:{
+          color: 'white'
+        }
+      }
+  
+
+};
 
   Plotly.newPlot('plot2', data, layout);
+
+
 
   albertaList = [];
   ontarioList = [];
@@ -358,113 +375,59 @@ var trace5 = {
   bcList = [];
   nunavutList = [];
   northtList = [];
-
-  sumValueList = [];
-
+  
   var filterData = hbarData.forEach( row => {
-    if (row[0] != 'Canada'){
+    if (row[0] != 'Canada' ){
       if (row[1] === 2019) {
-        if (row[0] === 'Alberta' ){
+        if (row[0] === 'Alberta' && row[2] === 'Total all types of electricity generation'){
         albertaList.push(row[3]);
       }
-        else if (row[0] === 'British Columbia'){
+        else if (row[0] === 'British Columbia' && row[2] === 'Total all types of electricity generation'){
         bcList.push(row[3]);
       }
-      else if (row[0] === 'Manitoba'){
+      else if (row[0] === 'Manitoba' && row[2] === 'Total all types of electricity generation'){
         manitobaList.push(row[3]);
       }
-      else if (row[0] === 'New Brunswick'){
+      else if (row[0] === 'New Brunswick' && row[2] === 'Total all types of electricity generation'){
         newBurnswickList.push(row[3]);
       }
-      else if (row[0] === 'Newfoundland and Labrador'){
+      else if (row[0] === 'Newfoundland and Labrador' && row[2] === 'Total all types of electricity generation'){
         newfoundlandList.push(row[3]);
       }
-      else if (row[0] === 'Northwest Territories'){
+      else if (row[0] === 'Northwest Territories' && row[2] === 'Total all types of electricity generation'){
         northtList.push(row[3]);
       }
-      else if (row[0] === 'Nova Scotia'){
+      else if (row[0] === 'Nova Scotia' && row[2] === 'Total all types of electricity generation'){
         novascotiaList.push(row[3]);
       }
-      else if (row[0] === 'Nunavut'){
+      else if (row[0] === 'Nunavut' && row[2] === 'Total all types of electricity generation'){
         nunavutList.push(row[3]);
       }
-      else if (row[0] === 'Ontario'){
+      else if (row[0] === 'Ontario' && row[2] === 'Total all types of electricity generation'){
         ontarioList.push(row[3]);
       }
-      else if (row[0] === 'Prince Edward Island'){
+      else if (row[0] === 'Prince Edward Island' && row[2] === 'Total all types of electricity generation'){
         peiList.push(row[3]);
       }
-      else if (row[0] === 'Quebec'){
+      else if (row[0] === 'Quebec' && row[2] === 'Total all types of electricity generation'){
         quebecList.push(row[3]);
+
       }
-      else if (row[0] === 'Saskatchewan'){
+      else if (row[0] === 'Saskatchewan' && row[2] === 'Total all types of electricity generation'){
         saskatchewanList.push(row[3]);
       }
-      else if (row[0] === 'Yukon'){
+      else if (row[0] === 'Yukon' && row[2] === 'Total all types of electricity generation'){
         yukonList.push(row[3]);
       }
   }
 }
   })
-      console.log(quebecList)
+    
+  var sumValueList = albertaList.concat(bcList, manitobaList, newBurnswickList, 
+    newfoundlandList, northtList, novascotiaList, nunavutList, ontarioList, 
+    peiList, quebecList, saskatchewanList, yukonList)
 
-    var alberatSum = albertaList.reduce(function(a, b){
-        return a + b;
-    }, 0);
-    var bcSum = bcList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var mSum = manitobaList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var newBSum = newBurnswickList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var newfoundlandSum = newfoundlandList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var northtSum = northtList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var novaSum = novascotiaList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var nunavutSum = nunavutList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var onSum = ontarioList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var peiSum = peiList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var qSum = quebecList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var sasSum = saskatchewanList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-    var ySum = yukonList.reduce(function(a, b){
-      return a + b;
-    }, 0);
-
-    sumValueList.push(alberatSum)
-    sumValueList.push(bcSum)
-    sumValueList.push(mSum)
-    sumValueList.push(newBSum)
-    sumValueList.push(newfoundlandSum)
-    sumValueList.push(northtSum)
-    sumValueList.push(novaSum)
-    sumValueList.push(nunavutSum)
-    sumValueList.push(onSum)
-    sumValueList.push(peiSum)
-    sumValueList.push(qSum)
-    sumValueList.push(sasSum)
-    sumValueList.push(ySum)
-
-
-    console.log(sumValueList)
-    console.log(qSum)
+  console.log(sumValueList)
 
   // Plotting the pie chart
     var trace = {
@@ -473,9 +436,9 @@ var trace5 = {
         type: 'pie',
         marker: {
               colors: ['rgb(128, 0, 0)', 
-              'rgb(179, 134, 0)', 
+              'rgb(102, 0, 204)', 
               'rgb(45, 134, 45)',
-              'rgb(128, 0, 0)',
+              'rgb(255, 255, 0)',
               'rgb(0, 163, 204)',
               'rgb(153, 51, 102)',
               'rgb(0, 45, 179)', 
@@ -488,11 +451,24 @@ var trace5 = {
             ]
           }
     }
-        var data = [trace];
+  var data = [trace];
 
-  Plotly.newPlot('plot4', data);
+  var layout = {
+    paper_bgcolor: "#ffffff00",
+    plot_bgcolor: "#ffffff00",
+    legend: {
+        font:{
+          color: 'white'
+        }
+      }
+  
+  
+  };
+  
+
+  Plotly.newPlot('plot4', data, layout);
  
-
-
-
 });
+
+
+
