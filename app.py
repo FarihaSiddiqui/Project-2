@@ -5,7 +5,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 
 
@@ -29,9 +29,9 @@ CORS(app)
 
 
 
-@app.route("/")
-def welcome():
-    return ("/api/v1.0/location, /api/v1.0/date ,/api/v1.0/renewable")
+#@app.route("/")
+#def welcome():
+#    return ("/api/v1.0/location, /api/v1.0/date ,/api/v1.0/renewable")
 
 @app.route("/api/v1.0/location")
 def locations():
@@ -89,6 +89,30 @@ def renewable():
 
     return jsonify(output)
 
+@app.route("/")
+def main():
+
+    return render_template('index.html')
+
+@app.route("/plots")
+def plots():
+
+    return render_template('plots.html')
+
+@app.route("/map")
+def map():
+
+    return render_template('map.html')
+
+@app.route("/plots2")
+def plots2():
+
+    return render_template('plots2.html')
+
+@app.route("/plots3")
+def plots3():
+
+    return render_template('plots3.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
