@@ -36,12 +36,13 @@ _ Grouped data based on our requirments
 - In Canada, the major power plants are hydraulic. This capacity has been developed where favourable geography and hydrography exist, primarily in Quebec, but also in British Columbia, Ontario, Labrador and Manitoba and Yukon. Ontario and New Brunswick are home to nuclear power stations. Alberta, Saskatchewan, Nova Scotia  and nothern territories mainly use fossil fuels for their energuy source. In Prince Edward Island, wind is the major source of energy. Nunavut energy is based on Petroleum. Solar however small (less than 1%) is being deployed in Ontario.
 
 #### Plots 
-i. Stacked bar chart - Canada's electricity generation in the past 12 years.
+1. Stacked bar chart - Canada's electricity generation in the past 12 years.
    Donut chart - Energy source distribution for 2019. 
    
-ii. Horizontal stacked bar chart - Enegy source distribution for each province 
+2. Horizontal stacked bar chart - Enegy source distribution for each province 
     Pie Chart - Power genration distribution across provinces.
-iii. Renewable vs. non-renewable energy sources   
+    
+3. Renewable vs. non-renewable energy sources   
 
 ![](static/images/timeplot.png)
 ![](static/images/province.png)
