@@ -29,9 +29,24 @@ _ Grouped data based on our requirments
 ## Other visualizations
 
 ![](static/images/map.png)
+
+- In Canada, the major power plants are hydraulic. This capacity has been developed where favourable geography and hydrography exist, primarily in Quebec, but also in British Columbia, Ontario, Labrador and Manitoba and Yukon.
+
+Ontario and New Brunswick are home to nuclear power stations.
+
+Alberta, Saskatchewan and Nova Scotia mainly use fossil fuels for their energuy source. 
+
+In Prince Edward Island, wind is the major source of energy. 
+
+In the nothern territories energy production is mainly based on fossil fuels.
+
+Nunavut energy is based on Petroleum.
+
+Solar however small (less than 1%) is being deployed in Ontario.
+
 ![](static/images/timeplot.png)
 ![](static/images/province.png)
-![](static/images/renewable.png)
+![](static/images/renewableplot.png)
 
 
 ## Conclusion
