@@ -1,6 +1,6 @@
 # CANADA - POWER GENERATION AND RENEWABLE ENERGY
 
-### Team Members: 
+#### Team Members: 
 - Nazila Entezari
 - Ying Feng
 - Fariha Siddiqui
@@ -24,3 +24,13 @@ _ Grouped data based on our requirments
 
 ### Webpage 
 
+![](static/images/mainpage.png
+
+
+## Conclusion
+
+- The most important source of energy in Canada is moving water, which generates 59% of electricity supply.
+
+- Fossil fuel including (coal, natural gas and petroleum) is the second most important energy source for electricity generation in Canada. Fossil fuel generation is particularly  significant in Alberta.
+
+- Nuclear power is the third most important source of electricity in Canada. About 16% of electricity is generated in Ontario.
