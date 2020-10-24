@@ -23,6 +23,10 @@ Over the recent decade, there has been a notion to promote the use of green ener
 - Removed null values 
 - Grouped data based on our requirments
 
+### Data Loading
+
+- Used ElephantSQL to load our data into the database that served up the API via the python flask app. 
+
 ## Webpage 
 
 ![](static/images/mainpage.png)
