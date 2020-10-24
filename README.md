@@ -24,7 +24,7 @@ _ Grouped data based on our requirments
 
 ### Webpage 
 
-![](static/images/mainpage.png
+![](static/images/mainpage.png)
 
 
 ## Conclusion
