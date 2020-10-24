@@ -28,6 +28,8 @@ _ Grouped data based on our requirments
 
 ## Other visualizations
 
+#### Map showing Powerplant locations across Canada
+
 ![](static/images/map.png)
 
 ##### Analysis:
