@@ -22,9 +22,16 @@ Over the recent decade, there has been a notion to promote the use of green ener
 - Removed null values 
 _ Grouped data based on our requirments
 
-### Webpage 
+## Webpage 
 
 ![](static/images/mainpage.png)
+
+## Other visualizations
+
+![](static/images/map.png)
+![](static/images/timeplot.png)
+![](static/images/province.png)
+![](static/images/renewable.png)
 
 
 ## Conclusion
