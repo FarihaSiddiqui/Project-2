@@ -50,7 +50,7 @@ def locations():
 
     session.close()
 
-    # all_locations = list(np.ravel(results))
+    
 
     return jsonify(output)
 
@@ -65,7 +65,7 @@ def dates():
 
     session.close()
 
-    # all_dates = list(np.ravel(results))
+   
 
     return jsonify(results)
 
@@ -84,8 +84,6 @@ def renewable():
                 'lon':lon,
                'RenewabletoNonReneableRatio': rtonr} for (name, date, elec_type, rtonr, lat, lon) in results]
     session.close()
-
-    # all_dates = list(np.ravel(results))
 
     return jsonify(output)
 
