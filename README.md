@@ -21,7 +21,7 @@ Over the recent decade, there has been a notion to promote the use of green ener
 - Used geopandas and geopy to get the coordinates for powerplants 
 - Changed date format 
 - Removed null values 
-_ Grouped data based on our requirments
+- Grouped data based on our requirments
 
 ## Webpage 
 
